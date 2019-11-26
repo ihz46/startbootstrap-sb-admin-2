@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>App Discos | VER DISCOS</title>
+    <title>App Discos | CREAR DISCO</title>
 
     <!-- Base -->
     <base href="/">
@@ -36,63 +36,63 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
 
-        <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-        
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-compact-disc"></i>
-                </div>
-                <div class="sidebar-brand-text mx-3">APP DISCOS <sup>V0</sup></div>
-            </a>
-        
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-        
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Inicio</span></a>
-            </li>
-        
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-        
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Gestión de discos
+    <!-- Sidebar -->
+    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+    
+        <!-- Sidebar - Brand -->
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <div class="sidebar-brand-icon rotate-n-15">
+                <i class="fas fa-compact-disc"></i>
             </div>
-        
-            <!-- Nav Item - Lista de discos -->
-            <li class="nav-item">
-                <a class="nav-link" href="privado/discos/index.html">
-                    <i class="fas fa-compact-disc"></i>
-                    <span>Discos</span></a>
-            </li>
-           
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-        
-            <!-- Nav Item - Crear Discos -->
-            <li class="nav-item">
-                <a class="nav-link" href="privado/discos/formulario.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Nuevo Disco</span></a>
-            </li>
-        
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-        
-            <!-- Sidebar Toggler (Sidebar) -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
-        
-        </ul>
-        <!-- End of Sidebar-->
-         
+            <div class="sidebar-brand-text mx-3">APP DISCOS <sup>V0</sup></div>
+        </a>
+    
+        <!-- Divider -->
+        <hr class="sidebar-divider my-0">
+    
+        <!-- Nav Item - Dashboard -->
+        <li class="nav-item active">
+            <a class="nav-link" href="index.html">
+                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <span>Inicio</span></a>
+        </li>
+    
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+    
+        <!-- Heading -->
+        <div class="sidebar-heading">
+            Gestión de discos
+        </div>
+    
+        <!-- Nav Item - Lista de discos -->
+        <li class="nav-item">
+            <a class="nav-link" href="privado/discos/index.html">
+                <i class="fas fa-compact-disc"></i>
+                <span>Discos</span></a>
+        </li>
+    
+        <!-- Divider -->
+        <hr class="sidebar-divider">
+    
+        <!-- Nav Item - Crear Discos -->
+        <li class="nav-item">
+            <a class="nav-link" href="privado/discos/formulario.html">
+                <i class="fas fa-fw fa-table"></i>
+                <span>Nuevo Disco</span></a>
+        </li>
+    
+        <!-- Divider -->
+        <hr class="sidebar-divider d-none d-md-block">
+    
+        <!-- Sidebar Toggler (Sidebar) -->
+        <div class="text-center d-none d-md-inline">
+            <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        </div>
+    
+    </ul>
+    <!-- End of Sidebar-->
+
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -306,90 +306,55 @@
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-
-                   
-                    <!-- DataTales Example -->
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Listado de discos</h6>
+                    <form class="user">
+                        <div class="form-group row">
+                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                <input type="text" class="form-control form-control-user" id="coverDisco" placeholder="carátula del disco">
+                            </div>
+                                                
                         </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>Cover</th>
-                                            <th>Título</th>
-                                            <th>Grupo</th>
-                                            <th>Fecha</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>Cover</th>
-                                            <th>Título</th>
-                                            <th>Grupo</th>
-                                            <th>Fecha</th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td><img class="imagen"
-                                                    src="https://www.zona-zero.net/includes/getimg.php?t=d&img=19033.jpg"
-                                                    alt="order in decline"></td>
-                                            <td>Order in decline</td>
-                                            <td>SUM 41</td>
-                                            <td>19/07/2019</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td><img class="imagen"
-                                                    src="http://www.potencialhardcore.org/WebRoot/StoreES2/Shops/64798605/5CD3/17B7/C0A3/0DD9/4FED/0A0C/6D0A/4294/gatillazo-como-convertirse-en-nada-cd-nuevo-S_976228-MLA26134436532_102017-F.jpg"
-                                                    alt="como convertirse en nada"></td>
-                                            <td>Como convertirse en nada</td>
-                                            <td>GATILLAZO</td>
-                                            <td>08/04/2016</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td><img class="imagen"
-                                                    src="https://http2.mlstatic.com/led-zeppelin-houses-of-the-holy-cd-nuevo-en-stock-original-D_NQ_NP_840273-MLA29236132401_012019-F.jpg"
-                                                    alt="houses of the holy"></td>
-                                            <td>Houses of the Holy</td>
-                                            <td>LED ZEPPELIN</td>
-                                            <td>28/03/1973</td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td><img class="imagen"
-                                                    src="https://m.media-amazon.com/images/I/81YjhKwpp9L._SS500_.jpg"
-                                                    alt="Extremely Flammable"></td>
-                                            <td>Extremely Flammable</td>
-                                            <td>SWAN FYAHBWOY</td>
-                                            <td>20/04/2012</td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td><img class="imagen"
-                                                    src="https://images-na.ssl-images-amazon.com/images/I/61uB0qglKBL._SX355_.jpg"
-                                                    alt="TNT"></td>
-                                            <td>T.N.T</td>
-                                            <td>ACDC</td>
-                                            <td>01/12/1975</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                        <div class="form-group row">
+                            <div class="col-sm-6 mb-3 mb-sm-0">
+                            <input type="text" class="form-control form-control-user" id="tituloDisco" placeholder="título del disco">
                             </div>
                         </div>
-                    </div>
+                        <div class="form-group row">
+                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                <input type="email" class="form-control form-control-user" id="grupoDisco" placeholder="grupo del disco">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <select class="form-control" id="fechaDisco">
+                                <option>2000</option>
+                                <option>2001</option>
+                                <option>2002</option>
+                                <option>2003</option>
+                                <option>2004</option>
+                                <option>2005</option>
+                                <option>2006</option>
+                                <option>2007</option>
+                                <option>2008</option>
+                                <option>2009</option>
+                                <option>2010</option>
+                                <option>2011</option>
+                                <option>2012</option>
+                                <option>2013</option>
+                                <option>2014</option>
 
-                </div>
+                            </select>
+                        </div>
+                        
+                        <a href="index.html" class="btn btn-primary btn-user btn-block col-sm-6">
+                            AÑADIR DISCO
+                        </a>
+                        <hr>
+                      
+                    </form>
+
+                  
                 <!-- /.container-fluid -->
 
-            </div>
+               </div>
             <!-- End of Main Content -->
 
             <!-- Footer -->
