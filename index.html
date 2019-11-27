@@ -10,6 +10,11 @@
   <meta name="author" content="">
 
   <title>Login</title>
+  
+
+
+  <!-- Icono web-->
+  <link rel="icon" type="image/png" href="/img/game-cd.png" />
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -19,6 +24,9 @@
 
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.css" rel="stylesheet">
+
+  <!-- Custom own styles -->
+  <link rel="stylesheet" href="css/custom.css">
 
 </head>
 
@@ -43,26 +51,38 @@
                   </div>
 
 
-                  <form class="user">
-                    <div class="form-group">
-                      <input type="email" class="form-control form-control-user" id="exampleInputEmail"
-                        aria-describedby="emailHelp" placeholder="Introduce tu email... ">
-                    </div>
-                    <div class="form-group">
-                      <input type="password" class="form-control form-control-user" id="exampleInputPassword"
-                        placeholder="Contraseña...">
-                    </div>
-                    <div class="form-group">
-                      <div class="custom-control custom-checkbox small">
-                        <input type="checkbox" class="custom-control-input" id="customCheck">
-                        <label class="custom-control-label" for="customCheck">Recordar</label>
-                      </div>
-                    </div>
-                    <a href="privado/index.html" class="btn btn-primary btn-user btn-block">
-                      Acceder
-                    </a>
-                    <hr>
-                   
+                  <form action="privado/index.html" method="post">
+                          <div class="form-group">
+                                <input type="email" 
+                                  name="email"
+                                  title="error al meter el email"
+                                  class="form-control form-control-user" 
+                                  id="exampleInputEmail"
+                                  placeholder="Introduce tu email... "
+                                  required
+                                  autofocus
+                                  pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                          </div>
+
+                          <div class="form-group">
+                                <input type="password" 
+                                  class="form-control form-control-user" 
+                                  id="exampleInputPassword"
+                                  placeholder="Contraseña..."
+                                  required>
+                          </div>
+                          <div class="form-group">
+                            <div class="custom-control custom-checkbox small">
+                              <input type="checkbox" 
+                              name="recordar"
+                              class="custom-control-input"
+                              id="customCheck">
+                              <label class="custom-control-label" for="customCheck">Recordar</label>
+                            </div>
+                          </div>
+                          <hr>
+                          <input type="submit" value="AÑADIR" class="btn btn-primary btn-user btn-block">
+                        
                   </form>
                   <hr>
                  

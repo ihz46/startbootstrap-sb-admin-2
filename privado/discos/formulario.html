@@ -8,8 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+  
 
     <title>App Discos | CREAR DISCO</title>
+
+    <!-- Icono web-->
+    <link rel="icon" type="image/png" href="/img/game-cd.png" />
 
     <!-- Base -->
     <base href="/">
@@ -53,7 +57,7 @@
         <!-- Nav Item - Dashboard -->
         <li class="nav-item active">
             <a class="nav-link" href="index.html">
-                <i class="fas fa-fw fa-tachometer-alt"></i>
+                <i class="fas fa-home"></i>
                 <span>Inicio</span></a>
         </li>
 
@@ -75,8 +79,20 @@
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                     <h6 class="collapse-header">Opciones:</h6>
-                    <a class="collapse-item" href="privado/discos/index.html">Listar Discos</a>
-                    <a class="collapse-item" href="privado/discos/formulario.html">Nuevo Disco</a>
+
+                    <!-- Option list disks -->
+                    <a class="collapse-item" href="privado/discos/index.html">
+                        <i class="fas fa-list"></i>
+                        <span>Listar Discos</span>
+                    </a>
+                    <!-- End option list disks -->
+
+                    <!-- Option add disks-->
+                    <a class="collapse-item" href="privado/discos/formulario.html">
+                        <i class="fas fa-plus-square"></i>
+                        <span>Añadir Disco</span>
+                    </a>
+                    <!-- End option add disks -->
                 </div>
             </div>
         </li>
@@ -305,48 +321,97 @@
                 <!-- End of Topbar -->
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
-                    
-                        <div class="row">
-                        <div class="col-lg-12 text-center">
-                            <h1>Añadir Disco</h1>
-                        <form class="user">
-                            <div class="form-group row">
-                                <div class="col-sm-8 offset-2 mb-3 mb-sm-0">
-                                    <input type="text" class="form-control form-control-user" id="coverDisco" placeholder="carátula del disco" pattern="[A-Za-z1-9]{1,255}\.(?:jpg|jpeg|gif|png|PNG)" required>
+                <div class="container-fluid bg-light">
+                
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        
+                    </div>
+                
+                    <!-- Content Row -->
+                    <div class="row justify-content-center">
+                        
+                
+                        <div class="col-sm-6">
+                            <h1 class="text-center h3 mb-5 text-gray-800 ">Crear disco</h1>
+                            <form action="URL_CONTROLADOR" method="post">
+                                
+                                <div class="form-group">
+                                    
+                                    <input type="text" 
+                                        name="cover" 
+                                        class="form-control form-control-user"
+                                        id="cover" 
+                                        onblur="cargarImagen(this.value)" 
+                                        required
+                                        pattern="[a-zA-Z0-9]{2,255}\.(jpg|jpeg|png|gif)" 
+                                        placeholder="URL imagen de la imagen, formato .jp(e)g .png .gif">
                                 </div>
-                                                    
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-sm-8 offset-2 mb-3 mb-sm-0">
-                                <input type="text" class="form-control form-control-user" id="tituloDisco" placeholder="título del disco" pattern="[A-Za-z1-9]{1,100}" required>
+                
+                                <div class="form-group">
+                                    
+                                    <input type="text" 
+                                        name="titulo" 
+                                        class="form-control form-control-user" 
+                                        id="titulo" 
+                                        required pattern=".{1,100}"
+                                        placeholder="título disco">
                                 </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="col-sm-8 offset-2 mb-3 mb-sm-0">
-                                    <input type="text" class="form-control form-control-user" id="grupoDisco" placeholder="grupo del disco" pattern="[A-Za-z1-9]{1,100}" required>
+                
+                                <div class="form-group">
+                                   
+                                    <input type="text" 
+                                        name="grupo" 
+                                        class="form-control form-control-user" 
+                                        id="grupo" 
+                                        required pattern=".{1,100}"
+                                        placeholder="nombre grupo">
                                 </div>
-                            </div>
-                            <div class="form-group row">
-                            
-                                <input type="date" class="form-control form-control-user col-sm-8 offset-2 mb-3 mb-sm-0" id="fechaDisco" required>
-                            
-                            </div>
-                            
-                            <a href="index.html" class="btn btn-primary btn-user btn-block col-sm-8 offset-2 mb-3 mb-sm-0">
-                                AÑADIR DISCO
-                            </a>
-                            <hr>
-                      
-                    </form>
-                </div>
+                                                
+                                <div class="form-group">
+                                     <!-- (TODO https://jqueryui.com/datepicker/) -->
+                                    <input type="date"
+                                     name="fecha" 
+                                     class="form-control form-control-user" 
+                                     id="fecha" 
+                                     required pattern=".{1,100}"                                    
+                                     placeholder="fecha lanzamiento del disco">
+                                </div>
+                
+                                <input type="submit" value="AÑADIR" class="btn btn-primary btn-user btn-block">
+                
+                            </form>
+                            <!-- formulario -->
                         </div>
-                    
-                  
-                <!-- /.container-fluid -->
+                        <!-- /.col-sm-6 -->
+                
+                
+                        <div class="col-sm-6 bg-register-image" id="container-img">
+                            <!-- cargamos la imagen dinamicamente con js -->
+                        </div>
+                
+                        <script>
+                            function cargarImagen(urlImagen) {
 
+                                console.debug('urlImagen %s', urlImagen);
+                                let containter = document.getElementById('container-img');
+
+                                //cambiamos stylos en linea del contenedor
+                                containter.style.background = "url(" + urlImagen + ")";
+                                containter.style.backgroundPosition = "center";
+                                containter.style.backgroundSize = "cover";
+                            }
+                        </script>
+                
+                
+                    </div>
+                    <!-- / Content Row -->
+                
                 </div>
-            <!-- End of Main Content -->
+                <!-- /.container-fluid -->
+                
+                </div>
+                <!-- End of Main Content -->
 
             <!-- Footer -->
             <footer class="sticky-footer bg-white">

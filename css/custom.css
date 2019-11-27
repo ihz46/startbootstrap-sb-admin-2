@@ -9,12 +9,22 @@ table img {
 
 }
 
-.form-group input:invalid {
-    border: 1px solid red;
+
+
+ .form-group input:invalid {
+    color: #e02222;
+    background-color: #fff;
+    border-color: #e02222;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(231, 0, 0, 0.78);
+
 
 }
 
 .form-group input:valid {
-    border: 1px solid green;
+    color: #11ff31;
+    background-color: #fff;
+    border-color: #11ff31;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(16, 194, 0, 0.657);
 }
-

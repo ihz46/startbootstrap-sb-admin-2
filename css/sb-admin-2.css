@@ -11743,11 +11743,11 @@ a:focus {
   background: url("https://images.freeimages.com/images/large-previews/19e/cd-shopping-1515804.jpg");
   background-position: center;
   background-size: cover;
-  filter:grayscale(1);
+  filter: grayscale(1);
 }
 
 .bg-register-image {
-  background: url("https://source.unsplash.com/Mv9hjnEUHR4/600x800");
+  background: url("/img/cdregistro.jpg");
   background-position: center;
   background-size: cover;
 }
