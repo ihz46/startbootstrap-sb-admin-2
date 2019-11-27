@@ -65,22 +65,22 @@
                 Gestión de discos
             </div>
         
-            <!-- Nav Item - Lista de discos -->
+            <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="privado/discos/index.html">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+                    aria-controls="collapseTwo">
                     <i class="fas fa-compact-disc"></i>
-                    <span>Discos</span></a>
+                    <span>Discos</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Opciones:</h6>
+                        <a class="collapse-item" href="privado/discos/index.html">Listar Discos</a>
+                        <a class="collapse-item" href="privado/discos/formulario.html">Nuevo Disco</a>
+                    </div>
+                </div>
             </li>
-           
-            <!-- Divider -->
-            <hr class="sidebar-divider">
         
-            <!-- Nav Item - Crear Discos -->
-            <li class="nav-item">
-                <a class="nav-link" href="privado/discos/formulario.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Nuevo Disco</span></a>
-            </li>
         
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -337,7 +337,7 @@
                                     <tbody>
                                         <tr>
                                             <td>1</td>
-                                            <td><img class="imagen"
+                                            <td><img class="rounded-circle"
                                                     src="https://www.zona-zero.net/includes/getimg.php?t=d&img=19033.jpg"
                                                     alt="order in decline"></td>
                                             <td>Order in decline</td>
@@ -346,7 +346,7 @@
                                         </tr>
                                         <tr>
                                             <td>2</td>
-                                            <td><img class="imagen"
+                                            <td><img class=" rounded-circle"
                                                     src="http://www.potencialhardcore.org/WebRoot/StoreES2/Shops/64798605/5CD3/17B7/C0A3/0DD9/4FED/0A0C/6D0A/4294/gatillazo-como-convertirse-en-nada-cd-nuevo-S_976228-MLA26134436532_102017-F.jpg"
                                                     alt="como convertirse en nada"></td>
                                             <td>Como convertirse en nada</td>
@@ -355,7 +355,7 @@
                                         </tr>
                                         <tr>
                                             <td>3</td>
-                                            <td><img class="imagen"
+                                            <td><img class=" rounded-circle"
                                                     src="https://http2.mlstatic.com/led-zeppelin-houses-of-the-holy-cd-nuevo-en-stock-original-D_NQ_NP_840273-MLA29236132401_012019-F.jpg"
                                                     alt="houses of the holy"></td>
                                             <td>Houses of the Holy</td>
@@ -364,7 +364,7 @@
                                         </tr>
                                         <tr>
                                             <td>4</td>
-                                            <td><img class="imagen"
+                                            <td><img class=" rounded-circle"
                                                     src="https://m.media-amazon.com/images/I/81YjhKwpp9L._SS500_.jpg"
                                                     alt="Extremely Flammable"></td>
                                             <td>Extremely Flammable</td>
@@ -373,7 +373,7 @@
                                         </tr>
                                         <tr>
                                             <td>5</td>
-                                            <td><img class="imagen"
+                                            <td><img class=" rounded-circle"
                                                     src="https://images-na.ssl-images-amazon.com/images/I/61uB0qglKBL._SX355_.jpg"
                                                     alt="TNT"></td>
                                             <td>T.N.T</td>
@@ -448,7 +448,7 @@
     <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
     <!-- Page level custom scripts -->
-    <script src="js/demo/datatables-demo.js"></script>
+    <script src="js/datatables-custom.js"></script>
 
 </body>
 

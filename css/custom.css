@@ -1,4 +1,20 @@
-.imagen {
+table img {
     height: 200px;
     width: 200px;
+    border: 2px solid #4e73df;
 }
+
+.bg-login {
+    filter: grayscale(1);
+
+}
+
+.form-group input:invalid {
+    border: 1px solid red;
+
+}
+
+.form-group input:valid {
+    border: 1px solid green;
+}
+
